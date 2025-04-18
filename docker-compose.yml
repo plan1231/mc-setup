@@ -8,7 +8,9 @@ services:
     environment:
       EULA: TRUE
       TYPE: MODRINTH
-      MODRINTH_MODPACK: ./tea-party.mrpack
+      MODRINTH_MODPACK: /tea-party.mrpack
+      ONLINE_MODE: FALSE
     volumes:
       # attach the relative directory 'data' to the container's /data path
       - ./data:/data
+      - ./tea-party.mrpack:/tea-party.mrpack
